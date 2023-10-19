@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "ts-node-dev src/index.ts",
+    "dev": "ts-node-dev index.ts",
     "tsc": "tsc",
     "start": "node index.ts",
     "test": "jest --config ./jest.config.js --detectOpenHandles"

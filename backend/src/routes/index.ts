@@ -2,7 +2,7 @@ import express from "express";
 import multer from "multer";
 import { updateFile } from "../controller/updateFileController";
 import searchUsers from "../controller/searchUsersController";
-const upload = multer({ dest: "uploads/" });
+const upload = multer({ dest: "../../csvData" });
 
 const router = express.Router();
 
@@ -23,7 +23,7 @@ router.get("/users", async (req, res) => {
 });
 
 //upload file route
-router.post("/files", upload.single("file"), async (req, res) => {
+router.post("/files",upload.single("file") , async (req, res) => {
   // console.log('body', req.file);
   const csvFile = req.file;
 
@@ -42,3 +42,4 @@ router.post("/files", upload.single("file"), async (req, res) => {
 });
 
 export default router;
+

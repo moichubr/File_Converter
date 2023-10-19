@@ -9,8 +9,9 @@ const app = express();
 app.use(express.json());
 app.set("env", "development");
 
+//https://fullstack-test-shawandpartners.vercel.app
 // Habilitar CORS para permitir solicitudes desde http://localhost:4000
-app.use(cors({ origin: "https://fullstack-test-shawandpartners.vercel.app" }));
+app.use(cors({ origin: "*" }));
 app.use(morgan("dev"));
 
 app.use("/api", routes);
