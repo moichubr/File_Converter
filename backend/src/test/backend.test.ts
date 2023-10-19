@@ -1,6 +1,6 @@
 
 import request from "supertest";
-import app from "../index";
+import app from "../../index";
 import searchUsers from "../controller/searchUsersController"; 
 import { updateFile } from '../controller/updateFileController';
 import {csvData} from "c:/Users/Moi/Desktop/fullstack_test/backend/csvData"; 

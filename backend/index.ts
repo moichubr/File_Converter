@@ -1,5 +1,5 @@
 import express from "express";
-import routes from "./routes/index";
+import routes from "./src/routes/index";
 import cors from "cors";
 import morgan from "morgan";
 
