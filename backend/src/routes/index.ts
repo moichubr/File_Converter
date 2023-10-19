@@ -12,7 +12,7 @@ router.get("/users", async (req, res) => {
   // console.log('keyword', keyword)
 
   if (!keyword) {
-    return res.status(400).json({ message: "Write something" });
+    return res.status(404).json({ message: "Write something" });
   }
   try {
     const result = await searchUsers(keyword);

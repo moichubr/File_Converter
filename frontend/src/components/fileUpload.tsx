@@ -43,7 +43,7 @@ const FileUpload = () => {
     return(
         <>
         <div>
-        <h2>Start uploading a file</h2>
+        <h2>Start by uploading a file</h2>
         <input type="file" onChange={handleFileChange} className={style.inputsearch}/>
         <button onClick={handleUpload}>Upload</button>
       </div>

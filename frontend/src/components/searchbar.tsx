@@ -32,7 +32,7 @@ const Searchbar = () => {
 
   return (
     <div className={style.searchcontainer}>
-      <h2>Search on it</h2>
+      <h2>Now, search for information in the file</h2>
       <input
         className={style.inputsearch}
         type="search"
@@ -44,7 +44,7 @@ const Searchbar = () => {
 
       <button onClick={handleSearch}>Search</button>
 
-      {error.length ? <span>{error}</span> : null}
+      {error.length ? <span >{error}</span> : null}
 
       <div className={style.cardcontainer}>
         {data && data.length > 0
