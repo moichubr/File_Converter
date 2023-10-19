@@ -1,0 +1,8 @@
+.container {
+    display: flex;
+    flex-direction: column;  
+    color: azure;
+    text-align: center;
+
+  }
+  
