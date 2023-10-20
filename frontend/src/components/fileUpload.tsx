@@ -21,6 +21,7 @@ const FileUpload = () => {
         
         const formData = new FormData();
         formData.append('file', selectedFile);
+        console.log('formdata', formData)
        
         axios
           .post('http://localhost:3000/api/files', formData, {

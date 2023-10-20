@@ -7,10 +7,29 @@ const Card = (props: any, index: number) => {
 
   return (
     <div key={index} className={style.card}>
+      <div className={style.titlecontainer}>
       <h3 className={style.name}>{name}</h3>
-      <p><b>City:</b> {city}</p>
-      <p><b>Country:</b> {country}</p>
-      <p><b>Favorite Sport:</b> {favorite_sport}</p>
+      </div>
+      <div className={style.pcontainer}>
+        <div className={style.div}>
+        <span><b>City</b></span>
+      <p> {city}</p>
+
+        </div>
+
+        <div className={style.div}>
+      <span><b>Country</b> </span>
+      <p>{country}</p>
+
+        </div>
+
+        <div>
+      <span><b>Favorite Sport</b></span>
+      <p> {favorite_sport}</p>
+
+        </div>
+      </div>
+     
     </div>
   );
 };
