@@ -1,11 +1,12 @@
 import express from "express";
-import multer from "multer";
+// import multer from "multer";
 import { updateFile } from "../controller/updateFileController";
 import searchUsers from "../controller/searchUsersController";
+const uploadFile = require('../../middleware/multer')
 export const csvData : any[] = [];
 
 
-const upload = multer({ dest: 'uploads/' });
+// const upload = multer({ dest: 'uploads/' });
 
 
 const router = express.Router();
@@ -27,8 +28,8 @@ router.get("/users", async (req, res) => {
 });
 
 //upload file route
-router.post("/files", upload.single("file"), async (req, res) => {
-  // console.log('body', req.file);
+router.post("/files", uploadFile(), async (req, res) => {
+  console.log('body', req.file);
   const csvFile = req.file;
 
   try {
